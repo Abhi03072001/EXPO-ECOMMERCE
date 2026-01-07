@@ -1,6 +1,6 @@
 import express from 'express';
 import path from 'path';
-import { ENV  } from './config/env.js';
+import { ENV } from './config/env.js';
 
 const app = express();
 
@@ -19,4 +19,4 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
-app.listen(3000, () => console.log("Server is up and running"));
+app.listen(ENV.PORT, () => console.log("Server is up and running"));
