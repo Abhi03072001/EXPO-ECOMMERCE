@@ -6,6 +6,10 @@ import { clerkMiddleware } from '@clerk/express'
 import { serve } from "inngest/express";
 import { functions, inngest } from "./config/inngest.js";
 import adminRoutes from './routes/admin.route.js';
+import userRoutes from './routes/user.route.js';
+
+
+
 
 const app = express();
 
@@ -18,6 +22,7 @@ app.use(clerkMiddleware());
 app.use("/api/inngest", serve({ client: inngest, functions }));
 
 app.use("/api/admin", adminRoutes);
+app.use("/api/admin", userRoutes);
 
 app.get("/api/health", (req, res) => {
     res.status(200).json({ message: "Success"});
