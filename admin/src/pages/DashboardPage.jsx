@@ -44,6 +44,7 @@ function DashboardPage() {
   return (
     <div className="space-y-6">
       {/* STATS */}
+      
       <div className="stats stats-vertical lg:stats-horizontal shadow w-full bg-base-100">
         {statsCards.map((stat) => (
           <div key={stat.name} className="stat">
@@ -52,7 +53,7 @@ function DashboardPage() {
             <div className="stat-value">{stat.value}</div>
           </div>
         ))}
-      </div>
+      </div>  
 
       {/* RECENT ORDERS */}
       <div className="card bg-base-100 shadow-xl">
