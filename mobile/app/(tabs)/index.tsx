@@ -6,8 +6,6 @@ import { Ionicons } from "@expo/vector-icons";
 import { useMemo, useState } from "react";
 import { View, Text, ScrollView, TouchableOpacity, TextInput, Image } from "react-native";
 
-import * as Sentry from "@sentry/react-native";
-
 const CATEGORIES = [
   { name: "All", icon: "grid-outline" as const },
   { name: "Electronics", image: require("@/assets/images/electronics.png") },
@@ -104,7 +102,6 @@ const ShopScreen = () => {
             })}
           </ScrollView>
         </View>
-
 
         <View className="px-6 mb-6">
           <View className="flex-row items-center justify-between mb-4">
