@@ -1,31 +1,67 @@
-✨ Highlights:
+# 🛍️ EXPO E-Commerce Platform
 
-📱 Fully Functional E-Commerce Mobile App (React Native + Expo)
-🔐 Secure Authentication with Clerk (Google & Apple sign-in)
-🛒 Cart, Favorites, Checkout & Orders Flow
-💳 Stripe-Powered Payments
-🗺️ Addresses System
-🏪 Admin Dashboard — Products, Orders, Customers & Stats
-⚙️ Complete REST API (Node.js + Express) with Auth & Roles
-🛂 Admin-Only Protected Routes
-📦 Background Jobs with Inngest
-🧭 Dashboard with Live Analytics
-🛠️ Product Management (CRUD, image handling, pricing, etc.)
-📦 Order Management
-👥 Customer Management Page
-🛡️ Sentry Integration for monitoring & error tracking
-🚀 Deployment on Sevalla (API + Admin Dashboard)
-🖼️ Product Image Slider
-⚡ Data Fetching & Caching with TanStack Query
-🧰 End-to-End Git & GitHub Workflow (branches, commits, PRs, code reviews)
-🤖 CodeRabbit PR Analysis (security, quality, optimization)
+A full-stack e-commerce solution featuring a React Native mobile app, Node.js backend API, and React admin dashboard.
 
+## ✨ Features
 
-🧪 .env Setup
-🟦 Backend (/backend)
+### Mobile App
+- 📱 **React Native + Expo** — Cross-platform mobile app
+- 🔐 **Secure Authentication** — Clerk integration with Google & Apple sign-in
+- 🛒 **Shopping Features** — Cart, favorites, wishlist, and checkout flow
+- 💳 **Stripe Payments** — Secure payment processing
+- 🗺️ **Address Management** — Multiple address support
+- 🏠 **Product Catalog** — Browse and search products
+- ⭐ **Ratings & Reviews** — Customer feedback system
+- 🖼️ **Image Slider** — Beautiful product image gallery
+
+### Admin Dashboard
+- 🏪 **Dashboard** — Live analytics and key metrics
+- 📦 **Product Management** — CRUD operations with image handling
+- 📋 **Order Management** — Track and manage orders
+- 👥 **Customer Management** — View customer details and activity
+- 🔒 **Admin-Only Routes** — Protected admin access
+
+### Backend API
+- ⚙️ **Node.js + Express** — RESTful API with authentication
+- 🛂 **Role-Based Access** — Admin and user roles
+- 📦 **Background Jobs** — Inngest for async operations
+- 🛡️ **Error Monitoring** — Sentry integration
+- 🔐 **Secure** — Authentication middleware and authorization
+
+### DevOps & Deployment
+- 🚀 **Deployed on Sevalla** — Production-ready
+- 📊 **TanStack Query** — Data fetching and caching
+- 🧰 **Git & GitHub Workflow** — Proper branching and PR process
+- 🤖 **CodeRabbit Analysis** — Automated code reviews
+
+## 🗂️ Project Structure
+
+```
+├── admin/          # React admin dashboard
+├── backend/        # Node.js + Express API
+├── mobile/         # React Native + Expo app
+└── README.md       # This file
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+- Expo CLI (for mobile development)
+
+### Installation & Setup
+
+#### 1. Backend Setup
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file:
+```env
 NODE_ENV=development
 PORT=3000
-
 DB_URL=<YOUR_DB_URL>
 CLERK_PUBLISHABLE_KEY=<YOUR_CLERK_PUBLISHABLE_KEY>
 CLERK_SECRET_KEY=<YOUR_CLERK_SECRET_KEY>
@@ -38,38 +74,70 @@ CLIENT_URL=http://localhost:5173
 STRIPE_PUBLISHABLE_KEY=<YOUR_STRIPE_PUBLISHABLE_KEY>
 STRIPE_SECRET_KEY=<YOUR_STRIPE_SECRET_KEY>
 STRIPE_WEBHOOK_SECRET=<YOUR_STRIPE_WEBHOOK_SECRET>
-🟩 Admin Dashboard (/admin)
+```
+
+Run the backend:
+```bash
+npm run dev
+```
+
+#### 2. Admin Dashboard Setup
+```bash
+cd admin
+npm install
+```
+
+Create a `.env` file:
+```env
 VITE_CLERK_PUBLISHABLE_KEY=<YOUR_CLERK_PUBLISHABLE_KEY>
 VITE_API_URL=http://localhost:3000/api
 VITE_SENTRY_DSN=<YOUR_SENTRY_DSN>
-🟧 Mobile App (/mobile)
-EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY= <YOUR_CLERK_PUBLISHABLE_KEY>
-SENTRY_AUTH_TOKEN=<YOUR_SENTRY_DSN>
-EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY=<YOUR_STRIPE_PUBLISHABLE_KEY>
+```
 
-
-🔧 Run the Backend
-cd backend
-npm install
+Run the dashboard:
+```bash
 npm run dev
+```
 
-
-🔧 Run the Admin
-cd admin
-npm install
-npm run dev
-
-
-🔧 Run the Mobile
+#### 3. Mobile App Setup
+```bash
 cd mobile
 npm install
+```
+
+Create a `.env` file:
+```env
+EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY=<YOUR_CLERK_PUBLISHABLE_KEY>
+SENTRY_AUTH_TOKEN=<YOUR_SENTRY_AUTH_TOKEN>
+EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY=<YOUR_STRIPE_PUBLISHABLE_KEY>
+```
+
+Run the mobile app:
+```bash
 npx expo start
-*And then scan the QR Code from your phone*
+```
+Scan the QR code with your phone to view the app.
 
+## 📸 Screenshots
 
-mobile app screenshots - 
-![cart Screen](./Screenshots/mob_app_cart.jpeg)
-![product Screen](./Screenshots/mob_app_product.jpeg)
-![addresses Screen](./Screenshots/mob_app_addresses.jpeg)
-![home Screen](./Screenshots/mob_app_home.jpeg)
-![profile Screen](./Screenshots/profile.jpeg)
+### Mobile App
+
+| Cart | Product | Addresses |
+|------|---------|-----------|
+| ![cart Screen](./Screenshots/mob_app_cart.jpeg) | ![product Screen](./Screenshots/mob_app_product.jpeg) | ![addresses Screen](./Screenshots/mob_app_addresses.jpeg) |
+
+| Home | Profile |
+|------|---------|
+| ![home Screen](./Screenshots/mob_app_home.jpeg) | ![profile Screen](./Screenshots/profile.jpeg) |
+
+## 🔑 Environment Variables Summary
+
+| Service | Variables Required |
+|---------|-------------------|
+| **Backend** | Database, Clerk, Inngest, Cloudinary, Stripe |
+| **Admin** | Clerk, API URL, Sentry |
+| **Mobile** | Clerk, Stripe, Sentry |
+
+## 📝 License
+
+This project is open source and available for educational purposes.
